@@ -12,7 +12,7 @@ class Student < ActiveRecord::Base
   end
 
   def switch_status
-    self.active ? self.active = false : self.active = true
+    self.active = !self.active
     self.save
   end
 end
